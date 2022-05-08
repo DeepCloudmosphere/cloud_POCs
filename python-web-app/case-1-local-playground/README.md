@@ -3,15 +3,15 @@
 To complete objectives for this case, you'll need to access and clone the ../app-source-code folder and try to execute different commands
 
 ## 1. To understand and list down application requirements
-**Which language/languages are used in the source code**
+- **Which language/languages are used in the source code**
 
    ```This application source code  is using python language```
    
-**Are there multiple services that are packaged in the app?**
+- **Are there multiple services that are packaged in the app?**
     
    ```Yes, there is a Mysql backend service that is packaged within the python source code  for read and write data from database.```
    
-**Is it a monolith OR a microservice ? How can one differentiate them ?**
+- **Is it a monolith OR a microservice ? How can one differentiate them ?**
 
    ```Yes it is a monolithic application.```
    
