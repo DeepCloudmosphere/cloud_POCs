@@ -25,10 +25,29 @@ To complete objectives for this case, you'll need to access and clone the ../app
     
    ![image](https://user-images.githubusercontent.com/98619865/167298374-21cb8864-9028-4818-8f4d-0ceabe3ef87e.png)
     
-- What are the networking requirements for the app ?
-    - Is it a batch job that runs in the background linux process? 
+
+- **What are the networking requirements for the app ?**
+
+    - Is it a batch job that runs in the background linux process?
+
+        ```No, it is not a batch job because ,a batch job is a scheduled program that is assigned to run on a computer without further user interaction.```
+
+        ```This is synchronous task and it is fine when a user needs the result of calculation immediately.``` 
+
+        ```Another use case is when the result is not relevant right now and the user just wants to schedule an execution of the task asynchronously that are run in background in linux process.```
+
     - Does it listen or expose any information on a port?
+
+      ```this application is not exposing or documenting any port it just listen  on  port 5000 for flask  and 3306 for mysql database  by default.```
+      
     - What kind of port binding is required for it to run?
+    
+      ```this application is not required any kind of port binding to run. because to run application simply execute file on locally that is listen port 5000 by default. ```
+
+
+
+
+
 - Imp: If application is stateful or stateless? What if the difference?
 - Dependency tree for application ( on what other application or distributed systems does it depend on? There can be other services/microservices or DBs probably with whome it interacts?)
 
