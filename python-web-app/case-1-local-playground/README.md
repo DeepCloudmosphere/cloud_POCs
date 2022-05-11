@@ -112,9 +112,4 @@ Thought process:
 - Check the logs from the service? Are logs written to a file or stdout of a container?
 
 Prepare a document and note down your understanding about different aspects of this application. remember, you can always be creative with diagrams.
-- What is the networking requirements for the app ?
-    - Is it a batch job that runs in the background linux process? 
-    - Does it listen or expose any information on a port?
-    - What kind of port binding is required for it to run?
-- Imp: If application is stateful or stateless? What if the difference?
-- Dependency tree for application ( on what other application or distributed systems does it depend on? There can be other services/microservices or DBs probably with whome it interacts?)
+
