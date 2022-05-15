@@ -120,12 +120,3 @@ NOTE:-> ` --link db_host1:db_host1 ` section link the `db_host1` container  to p
 ![Screenshot 2022-05-15 at 12 58 06 PM](https://user-images.githubusercontent.com/98619865/168462089-df4cb482-959d-498e-9bd2-82eb21e71195.png)
 
 
-3. Understand success criteria if our application is able to run successfully on local machines
-
-Thought process:
-- Try to interact with the service?
-- Start/Stop/Restart to check the behaviors and note them down?
-- Check the logs from the service? Are logs written to a file or stdout of a container?
-
-Prepare a document and note down your understanding about different aspects of this application. remember, you can always be creative with diagrams.
-
