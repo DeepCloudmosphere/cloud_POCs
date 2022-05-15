@@ -64,6 +64,18 @@ To complete objectives for this case, you'll need to access and clone the ../app
 
 - **How can we build and test application locally ? Docker compose or similar solution ?**
 
+- ``` To run application locally first install dependencies that are present in requirements.txt ```
+
+  ![Screenshot 2022-05-15 at 5 41 00 PM](https://user-images.githubusercontent.com/98619865/168472308-93401e52-baca-478f-9114-0628c87c560c.png)
+
+
+-  Run ```pip3 install -r requirements.txt``` to install dependencies.
+
+- Run ``` python3 app.py ``` 
+
+
+
+
   ``` Before building application we must have to create a Dockerfile of that application source code.```
 
   ``` In this case we also take care of security and size of the image by using distroless image  provided by google.```
@@ -136,3 +148,5 @@ NOTE:-> ` --link db_host1:db_host1 ` section link the `db_host1` container  to p
 **step-2** Run command ```docker-compose -f docker-compose.dev.yml up```
 
 ![Screenshot 2022-05-15 at 5 34 50 PM](https://user-images.githubusercontent.com/98619865/168471913-51f1e33b-6ed0-4e7e-b16a-2dbf0ba7b386.png)
+
+
