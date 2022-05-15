@@ -83,7 +83,7 @@ To complete objectives for this case, you'll need to access and clone the ../app
 
 
 
-  ```By default, many containers are configured to execute as root, which is needed to install packages and make configuration settings. But after all that is done, we can change to a non-root user. distroless image is already included nonroot user (65532:65532).```
+  ```By default, many containers are configured to execute as root, which is needed to install packages and make configuration settings. But after all that is done, we can change to a non-root user. distroless image is already included 'nonroot' user with user id (65532:65532).```
 
 
 
@@ -98,10 +98,26 @@ To complete objectives for this case, you'll need to access and clone the ../app
 
  ![Screenshot 2022-05-11 at 11 45 28 PM](https://user-images.githubusercontent.com/98619865/167918736-a4b1b5fe-ebac-488f-864e-4551050ad748.png)
 
+----------------------------------------------**Finally test application**---------------------------------------------------
 
-  ----------Finally test application by `docker container run -p 3333:5000  deepcloudmosphere/python-web:distroless` command ----------
+  `But, first we need to run database container before python-web container.`
+  
+  -------run database container by `docker container run -d --name db_host1 -e MYSQL_ROOT_PASSWORD=mysql -e MYSQL_USER=db_user  -e MYSQL_PASSWORD=db_pass  -e MYSQL_DATABASE=db_name --expose 3306 mysql` command  and run `docker ps` to ensure that database is running ---------------------
+  
+  
+  ![Screenshot 2022-05-15 at 12 54 15 PM](https://user-images.githubusercontent.com/98619865/168461984-bdb3a447-f630-4711-8659-5928be76e9ef.png)  
+  
 
-![Screenshot 2022-05-11 at 11 46 44 PM](https://user-images.githubusercontent.com/98619865/167919394-75b78bab-0a4c-492a-bc59-c18f04723ef8.png)
+
+
+
+  ----------test web application by  ` docker container run -p 2424:5000 --name python-web1 -e MYSQL_ROOT_PASSWORD='mysql' -e DB_HOST='db_host1' -e DB_USER='db_user' -e DB_PASS='db_pass' -e DB_NAME='db_name' --link db_host1:db_host1 deepcloudmosphere/python-web:distroless
+` command ----------
+
+NOTE:-> ` --link db_host1:db_host1 ` section link the `db_host1` container  to python-web1 container that are listining `db_host1`
+
+
+![Screenshot 2022-05-15 at 12 58 06 PM](https://user-images.githubusercontent.com/98619865/168462089-df4cb482-959d-498e-9bd2-82eb21e71195.png)
 
 
 3. Understand success criteria if our application is able to run successfully on local machines
