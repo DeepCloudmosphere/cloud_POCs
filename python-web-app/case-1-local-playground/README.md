@@ -120,3 +120,19 @@ NOTE:-> ` --link db_host1:db_host1 ` section link the `db_host1` container  to p
 ![Screenshot 2022-05-15 at 12 58 06 PM](https://user-images.githubusercontent.com/98619865/168462089-df4cb482-959d-498e-9bd2-82eb21e71195.png)
 
 
+
+
+**Docker compose**
+
+- As you know Docker is a great tool to Encapsulate microservices and working together make a form of useful  application....
+- Instead of gluing each  microservices together with script and long Docker command  previously we did that can be hard this is where Docker Compose comes.
+- Docker Compose let's you describe entire app(microservices) in a single declarative YAML file and deploy it with a single command. Once app is deployed, you can manage it entire life cycle  with a single set of command.
+
+**step-1**  ``` create yaml file```
+
+ ![Screenshot 2022-05-15 at 5 26 16 PM](https://user-images.githubusercontent.com/98619865/168471557-de4f3859-62ca-4f86-84fc-cd43913c2620.png)
+
+ 
+**step-2** Run command ```docker-compose -f docker-compose.dev.yml up```
+
+![Screenshot 2022-05-15 at 5 34 50 PM](https://user-images.githubusercontent.com/98619865/168471913-51f1e33b-6ed0-4e7e-b16a-2dbf0ba7b386.png)
