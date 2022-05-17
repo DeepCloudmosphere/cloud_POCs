@@ -3,15 +3,15 @@
 To complete objectives for this case, you'll need to access and clone the ../app-source-code folder and try to execute different commands
 
 ## 1. To understand and list down application requirements
-- **Which language/languages are used in the source code**
+  ### Which language/languages are used in the source code**
 
    ```This application source code  is using python language```
    
-- **Are there multiple services that are packaged in the app?**
+  ### Are there multiple services that are packaged in the app?**
     
    ```Yes, there is a Mysql backend service that is packaged within the python source code  for read and write data from database.```
    
-- **Is it a monolith OR a microservice ? How can one differentiate them ?**
+  ### Is it a monolith OR a microservice ? How can one differentiate them ?**
 
    ```Yes it is a monolithic application.```
    
@@ -27,7 +27,7 @@ To complete objectives for this case, you'll need to access and clone the ../app
     
 
 
-- **What are the networking requirements for the app ?**
+ ### What are the networking requirements for the app ?**
 
     - Is it a batch job that runs in the background linux process?
 
@@ -50,11 +50,11 @@ To complete objectives for this case, you'll need to access and clone the ../app
 
 ## 2. Build application locally to understand the build process and dependencies.
 
-- **Application is dockerized or not?**
+  ### Application is dockerized or not?**
 
   ```No application is not dockerize its just in form of source code.```
 
-- **If the application is not dockerized can we dockerize it or not?**
+  ### If the application is not dockerized can we dockerize it or not?**
     ``` 
     Yes, we can dockerize application with two simple steps
 
@@ -62,7 +62,7 @@ To complete objectives for this case, you'll need to access and clone the ../app
           2. build image with the help of docker file. 
     ```
 
-- **How can we build and test application locally ? Docker compose or similar solution ?**
+   ### How can we build and test application locally ? Docker compose or similar solution ?**
 
 - ``` To run application locally first install dependencies that are present in requirements.txt ```
 
@@ -134,19 +134,36 @@ NOTE:-> ` --link db_host1:db_host1 ` section link the `db_host1` container  to p
 
 
 
-**Docker compose**
+  **Docker compose**
 
 - As you know Docker is a great tool to Encapsulate microservices and working together make a form of useful  application....
 - Instead of gluing each  microservices together with script and long Docker command  previously we did that can be hard this is where Docker Compose comes.
 - Docker Compose let's you describe entire app(microservices) in a single declarative YAML file and deploy it with a single command. Once app is deployed, you can manage it entire life cycle  with a single set of command.
 
-**step-1**  ``` create yaml file```
+  **step-1**  ``` create yaml file```
 
  ![Screenshot 2022-05-15 at 5 26 16 PM](https://user-images.githubusercontent.com/98619865/168471557-de4f3859-62ca-4f86-84fc-cd43913c2620.png)
 
  
-**step-2** Run command ```docker-compose -f docker-compose.dev.yml up```
+  **step-2** Run command ```docker-compose -f docker-compose.dev.yml up```
 
 ![Screenshot 2022-05-15 at 5 34 50 PM](https://user-images.githubusercontent.com/98619865/168471913-51f1e33b-6ed0-4e7e-b16a-2dbf0ba7b386.png)
 
 
+  ### If application runs as binary can we write a service file**
+
+  ``` Yes we can write a service file ``` 
+  
+  ![Screenshot 2022-05-17 at 5 08 56 PM](https://user-images.githubusercontent.com/98619865/168804749-bd2f8661-dcbe-42f8-b3c0-1af3926db0c2.png)
+  
+  - You can see the Output by
+  
+    ``` sudo systemctl start python.service ```
+    
+    ``` sudo systemctl deamon-reload ```
+    
+    ``` sudo systemctl status python.service ```
+  
+  ![Screenshot 2022-05-17 at 5 23 48 PM](https://user-images.githubusercontent.com/98619865/168805254-3d00637c-eda7-438d-a9a4-17da77896f72.png)  
+  
+  
