@@ -151,8 +151,29 @@ NOTE:-> ` --link db_host1:db_host1 ` section link the `db_host1` container  to p
 
 
   ### If application runs as binary can we write a service file**
+  
+  ```firstly go to root user```
+  
+  #### first we need to make a binary by pyinstaller([How to install pyinstaller?])(https://medium.com/analytics-vidhya/how-to-create-executable-of-your-python-application-from-linux-windows-mac-bcbcdd4603d4) 
+  
+  ![Screenshot 2022-05-18 at 11 38 11 PM](https://user-images.githubusercontent.com/98619865/169143641-5884e859-a7b5-42c4-a17b-d741b713753b.png)    
+  
+  ``` Now test it locally ```
+  
+  ``` but first configure the database by changing root password by following command ```
+  
+  ![Screenshot 2022-05-19 at 1 14 04 AM](https://user-images.githubusercontent.com/98619865/169143994-b6d8ec25-8227-42cd-9713-babff47c685a.png)  
+   
+  ``` Start and stop mysql.service by systemctl command as root user ```
+  
+   Apply environment variable :-> ```  export DB_USER='root' DB_PASS='Dountless@123' DB_HOST='localhost' DB_NAME='deepak';```
+   
+  
+  ``` Now test binary file dirctly run in bash or ```./app``` like this o..
+  
+  ![Screenshot 2022-05-19 at 2 09 57 AM](https://user-images.githubusercontent.com/98619865/169151891-3a03285a-abf2-4d87-a9a3-9ce0ac62ca47.png)  
 
-  ``` Yes we can write a service file ``` 
+  ``` Now we have a binary file so,Yes we can write a service file ``` 
   
   ![Screenshot 2022-05-17 at 5 08 56 PM](https://user-images.githubusercontent.com/98619865/168804749-bd2f8661-dcbe-42f8-b3c0-1af3926db0c2.png)
   
