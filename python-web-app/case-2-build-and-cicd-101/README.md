@@ -2,14 +2,36 @@ Objective:
 
 To complete objectives for this case, you'll need to access and clone the ../app-source-code folder and try to execute different commands
 
-1. Understanding artifacts in an SDLC: 
+# 1. Understanding artifacts in an SDLC: 
 Artifacts can be documents, architecture diagrams or application binaries, docker images etc. Basically anything that is deliverable to different or same business line.
 
-Thought process:
-- What type of artifacts are required in order to run the application
-- How we can define the build and release cycles using these artifacts ?
-- What gets updates when there is a change in the application ( can be source code change due to new release, can be network change, can be firewall change etc)
-- How artifacts differ when it comes to monolith OR a micro-service ?
+
+### Thought process:
+ 
+#### - What type of artifacts are required in order to run the application
+ 
+ ``` To run this application required only application binaries artifacts```
+
+#### - How we can define the build and release cycles using these artifacts ?
+
+#### - What gets updates when there is a change in the application ( can be source code change due to new release, can be network change, can be firewall change etc)
+
+``` if there is any change in the application then will need to change source code or may be network and firewall. ```
+
+#### - How artifacts differ when it comes to monolith OR a micro-service ?
+
+- In terms to monolithic
+
+``` all of the code for a system is in a single codebase that is compiled together and produces a single artifact. ```
+
+- In terms to micro-service 
+
+``` a micro-service(non-monolithic) module design may have code split into multiple modules or libraries that can be compiled separately, stored in repositories and referenced when required. ```
+
+![image](https://user-images.githubusercontent.com/98619865/169771941-7664c536-5256-4181-8e7d-420ea99722d6.png)
+
+
+
 
 
 2. Establish a pipeline/system design to build artifacts in CI (continuous integration) system so that they are available for CD (continuous deployment) system
