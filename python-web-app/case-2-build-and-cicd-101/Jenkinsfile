@@ -8,7 +8,7 @@ pipeline {
          stage('checkout') { 
              steps{
                echo "clone repo..."
-               git "https://github.com/DeepCloudmosphere/cloud_POCs.git"
+               git branch: 'main', url: "https://github.com/DeepCloudmosphere/cloud_POCs.git"
              }
 
          }
