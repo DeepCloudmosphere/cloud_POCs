@@ -2,47 +2,32 @@
 
 pipeline {
     agent any
-    environment {
-       NEW_VERSION = '1.1'   //own environments variable
-       MY_CREDENTIALS = credentials('hellocredential')
-    }
+    
+    
     stages {
+        stage('Checkout') { 
+            echo "clone repo..."
+            git 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
+        }
         stage('Build') {
-            
-              // this when section is for some condition 
-//             when {
-                
-//                 expression {
-                        
-//                             BRANCH_NAME == 'main'  && CODE_CHANGES == true
-                    
-//                    }
-//             }
-                
             steps {
                 echo "building...."
-                echo "building version is ${ NEW_VERSION}"
-                //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
-                //sh 'pip3 install -r ./python-web-app/app-source-code/requirements.txt'
+                sh 'docker image build -t deepcloudmosphere/python-web:distroless-j ./python-web-app/'
             }
 
         }
         stage('test') {
            steps {
                 echo "testing...."
-                //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
-                //sh 'pip3 install -r ./python-web-app/app-source-code/requirements.txt'
+                
             }
 
         }
       
         stage('deploy') {
            steps {
-                echo "deploying hureee...."
-                echo " deploying/deliver with this credentials ${MY_CREDENTIALS}"
-//                 sh "${MY_CREDENTIALS}"
-                //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
-                //sh 'pip3 install -r ./python-web-app/app-source-code/requirements.txt'
+                echo "deploying hureee...."  
+               
             }
 
         }          
