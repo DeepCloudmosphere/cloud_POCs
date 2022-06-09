@@ -15,7 +15,7 @@ pipeline {
          stage('Build') {
              steps {
                  echo "building...."
-                 scripts{
+                 script{
                       app = docker.build("deepcloudmosphere/python-web:distroless-j")
                  }
                  
