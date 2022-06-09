@@ -5,9 +5,12 @@ pipeline {
     
     
     stages {
-//         stage('checkout') { 
-//             echo "clone repo..."
-//             git "https://github.com/DeepCloudmosphere/cloud_POCs.git"
+         stage('checkout') { 
+             steps{
+               echo "clone repo..."
+               git "https://github.com/DeepCloudmosphere/cloud_POCs.git"
+             }
+
 //         }
 //         stage('Build') {
 //             steps {
