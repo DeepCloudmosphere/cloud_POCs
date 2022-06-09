@@ -5,17 +5,17 @@ pipeline {
     
     
     stages {
-        stage('checkout') { 
-            echo "clone repo..."
-            git "https://github.com/DeepCloudmosphere/cloud_POCs.git"
-        }
-        stage('Build') {
-            steps {
-                echo "building...."
-                sh 'docker image build -t deepcloudmosphere/python-web:distroless-j ./python-web-app/'
-            }
+//         stage('checkout') { 
+//             echo "clone repo..."
+//             git "https://github.com/DeepCloudmosphere/cloud_POCs.git"
+//         }
+//         stage('Build') {
+//             steps {
+//                 echo "building...."
+//                 sh 'docker image build -t deepcloudmosphere/python-web:distroless-j ./python-web-app/'
+//             }
 
-        }
+//         }
         stage('test') {
            steps {
                 echo "testing...."
