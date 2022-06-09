@@ -12,13 +12,13 @@ pipeline {
              }
 
          }
-//         stage('Build') {
-//             steps {
-//                 echo "building...."
-//                 sh 'docker image build -t deepcloudmosphere/python-web:distroless-j ./python-web-app/'
-//             }
+         stage('Build') {
+             steps {
+                 echo "building...."
+                 sh 'docker image build -t deepcloudmosphere/python-web:distroless-j ./python-web-app/'
+             }
 
-//         }
+         }
         stage('test') {
            steps {
                 echo "testing...."
