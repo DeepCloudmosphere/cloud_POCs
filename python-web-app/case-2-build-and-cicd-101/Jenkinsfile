@@ -22,7 +22,7 @@ pipeline {
 //         stage('test') {
 //            steps {
 //                 echo "testing...."
-//                 sh "docker run  deepcloudmosphere/python-web:distroless-j"
+//                 app = docker.build("deepcloudmosphere/python-web:distroless-j")
                 
 //             }
 
