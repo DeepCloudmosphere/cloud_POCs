@@ -10,7 +10,7 @@ pipeline {
             }
 
         }
-       stage('test') {
+        stage('test') {
            steps {
                 echo "testing...."
                 //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
@@ -19,7 +19,7 @@ pipeline {
 
         }
       
-       stage('deploy') {
+        stage('deploy') {
            steps {
                 echo "deploying hureee...."
                 //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
@@ -29,4 +29,6 @@ pipeline {
         }          
           
     }
+    
+}
 
