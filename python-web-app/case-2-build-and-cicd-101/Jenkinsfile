@@ -5,9 +5,9 @@ pipeline {
     
     
     stages {
-        stage('Checkout') { 
+        stage('checkout') { 
             echo "clone repo..."
-            git 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
+            git "https://github.com/DeepCloudmosphere/cloud_POCs.git"
         }
         stage('Build') {
             steps {
