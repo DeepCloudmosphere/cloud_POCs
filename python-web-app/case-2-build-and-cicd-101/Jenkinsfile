@@ -19,18 +19,24 @@ pipeline {
              }
 
          }
-        stage('test') {
-           steps {
-                echo "testing...."
-                sh "docker run  deepcloudmosphere/python-web:distroless-j"
+//         stage('test') {
+//            steps {
+//                 echo "testing...."
+//                 sh "docker run  deepcloudmosphere/python-web:distroless-j"
                 
-            }
+//             }
 
-        }
+//         }
       
         stage('deploy') {
            steps {
-                echo "deploying hureee...."  
+                echo "post to dockerhub"
+               withCredentials([
+                   usernamePassword(credentialsId: 'dockerhub-credentials', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')
+               ]){
+                   sh "docker login -u ${dockerHubUser} -p ${dockerHubPassword}""
+                   sh "docker push deepcloudmosphere/python-web:distroless-j"
+               }
                
             }
 
