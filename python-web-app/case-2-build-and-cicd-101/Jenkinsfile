@@ -15,15 +15,13 @@ pipeline {
          stage('Build') {
              steps {
                  echo "building...."
-                 sh "docker image build -t deepcloudmosphere/python-web:distroless-j ./python-web-app/"
+                 app = docker.build("deepcloudmosphere/python-web:distroless-j")
              }
 
          }
 //         stage('test') {
 //            steps {
-//                 echo "testing...."
-//                 app = docker.build("deepcloudmosphere/python-web:distroless-j")
-                
+//                 echo "testing...."                
 //             }
 
 //         }
