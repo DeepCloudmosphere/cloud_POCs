@@ -2,9 +2,14 @@
 
 pipeline {
     agent any
-    
+    environment {
+       NEW_VERSION = '1.1'   //own environments variable
+       MY_CREDENTIALS = credentials('hellocredential')
+    }
     stages {
         stage('Build') {
+            
+              // this when section is for some condition 
 //             when {
                 
 //                 expression {
@@ -16,6 +21,7 @@ pipeline {
                 
             steps {
                 echo "building...."
+                echo "building version is ${ NEW_VERSION}"
                 //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
                 //sh 'pip3 install -r ./python-web-app/app-source-code/requirements.txt'
             }
@@ -33,6 +39,8 @@ pipeline {
         stage('deploy') {
            steps {
                 echo "deploying hureee...."
+                echo " deploying/deliver with this credentials ${MY_CREDENTIALS}"
+//                 sh "${MY_CREDENTIALS}"
                 //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
                 //sh 'pip3 install -r ./python-web-app/app-source-code/requirements.txt'
             }
