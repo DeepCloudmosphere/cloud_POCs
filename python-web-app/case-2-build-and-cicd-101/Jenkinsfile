@@ -11,7 +11,7 @@ pipeline {
                git "https://github.com/DeepCloudmosphere/cloud_POCs.git"
              }
 
-//         }
+         }
 //         stage('Build') {
 //             steps {
 //                 echo "building...."
