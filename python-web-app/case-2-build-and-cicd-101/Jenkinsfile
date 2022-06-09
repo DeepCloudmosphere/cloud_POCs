@@ -1,0 +1,34 @@
+
+      
+    pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                echo "building...."
+                //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
+                //sh 'pip3 install -r ./python-web-app/app-source-code/requirements.txt'
+            }
+
+        }
+       stage('test') {
+           steps {
+                echo "testing...."
+                //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
+                //sh 'pip3 install -r ./python-web-app/app-source-code/requirements.txt'
+            }
+
+        }
+      
+       stage('deploy') {
+           steps {
+                echo "deploying hureee...."
+                //git branch: 'main', url: 'https://github.com/DeepCloudmosphere/cloud_POCs.git'
+                //sh 'pip3 install -r ./python-web-app/app-source-code/requirements.txt'
+            }
+
+        }          
+          
+    }
+
