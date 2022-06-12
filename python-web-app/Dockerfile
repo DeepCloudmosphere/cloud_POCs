@@ -1,22 +1,18 @@
+
+				### Dockerfile ###
+
 #### Stage 1 ###
 # Build virtualenv in apline image 
 
-FROM alpine AS build
+FROM alpine AS FLASK
 
 # Name and email of the person who maintains the file
 MAINTAINER Deepak Verma  deepcloud.28@gmail.com
 
 RUN apk add python3 
-RUN python3 -m venv /venvflask &&  /venvflask/bin/pip install --upgrade pip && source /venvflask/bin/activate
-COPY ./app-source-code/requirements.txt /requirements.txt
-RUN /venvflask/bin/pip3 install  -r /requirements.txt
-
-### Stage 2 ###
-#Change file owner  and copy the virtualenv into a distroless image
-
-FROM gcr.io/distroless/python3
-COPY --from=build   /venvflask/ /venvflask/
-COPY ./app-source-code/ /venvflask/ 
-WORKDIR /venvflask/
-EXPOSE 5000
-ENTRYPOINT ["/venvflask/bin/python3","-m" , "flask", "run", "--host=0.0.0.0"]
+RUN python3 -m venv /venv &&  /venv/bin/pip install --upgrade pip && source /venv/bin/activate
+COPY requirements.txt /requirements.txt
+RUN /venv/bin/pip3 install --disable-pip-version-check -r /requirements.txt
+COPY app.py /venv/
+WORKDIR /venv/ 
+ENTRYPOINT ["/venv/bin/python3", "app.py"]
