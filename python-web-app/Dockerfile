@@ -10,7 +10,7 @@ RUN apk add python3
 RUN python3 -m venv /venv &&  /venv/bin/pip install --upgrade pip && source /venv/bin/activate
 COPY ./app-source-code/requirements.txt /requirements.txt
 RUN /venv/bin/pip3 install --disable-pip-version-check -r /requirements.txt
-RUN /venv/bin/pip3 install flask
+RUN /venv/bin/pip install flask
 
 ### Stage 2 ###
 #Change file owner  and copy the virtualenv into a distroless image
