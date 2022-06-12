@@ -15,7 +15,7 @@ RUN /venvflask/bin/pip3 install --disable-pip-version-check -r /requirements.txt
 #Change file owner  and copy the virtualenv into a distroless image
 
 FROM gcr.io/distroless/python3
-COPY --from=build --chown=nonroot:nonroot /venv /venv
+COPY --from=build --chown=nonroot:nonroot /venvflask /venvflask
 COPY ./app-source-code/ /venv 
 WORKDIR /venv 
 EXPOSE 5000
