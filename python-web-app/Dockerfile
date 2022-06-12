@@ -9,7 +9,7 @@ MAINTAINER Deepak Verma  deepcloud.28@gmail.com
 RUN apk add python3 
 RUN python3 -m venv /venvflask &&  /venvflask/bin/pip install --upgrade pip && source /venvflask/bin/activate
 COPY ./app-source-code/requirements.txt /requirements.txt
-RUN /venvflask/bin/pip3 install --disable-pip-version-check -r /requirements.txt
+RUN /venvflask/bin/pip3 install  -r /requirements.txt
 
 ### Stage 2 ###
 #Change file owner  and copy the virtualenv into a distroless image
