@@ -1,5 +1,5 @@
 
-				### Dockerfile 2 ###
+				### Dockerfile ###
 
 #### Stage 1 ###
 # Build virtualenv in apline image 
