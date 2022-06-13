@@ -11,6 +11,7 @@ db_host = os.environ.get('DB_HOST')
 db_name = os.environ.get('DB_NAME')
 
 
+
 @app.route('/')
 def hello_cloudoric():
   return 'Hello, Cloudoric!'
