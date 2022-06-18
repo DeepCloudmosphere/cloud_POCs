@@ -34,13 +34,78 @@ Artifacts can be documents, architecture diagrams or application binaries, docke
 
 
 
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  # 2. Establish a pipeline/system design to build artifacts in CI (continuous integration) system so that they are available for CD (continuous deployment) system
 
 ### Thought process:
 #### - Thinking about storing builds or deployable in repositories?
+
+ - here i am going to  use github to store all builds or source code  so , i can easily pull and push code whenever any change will happened for that following command will be use.
+
+          git pull  git@github.com:DeepCloudmosphere/cloud_POCs.git
+
+   and make somechnage in my local repo and push to remote repo by following command.
+
+         git push  git@github.com:DeepCloudmosphere/cloud_POCs.git
+         
 #### - Prepare the repository ( What are public and private repositories)?
+
+
+   - for doing the above stuff(push and pull) need to create a repositories in my github account (here i use repo name `cloud_POCs`)`
+     
+       ![Screenshot 2022-06-17 at 4 44 40 PM](https://user-images.githubusercontent.com/98619865/174293340-2564af77-579b-483c-8865-0aca1303c014.png)
+
+
+
+   Note:- 
+
+      -   Public repositories are accessible to everyone on the internet. 
+ 
+      - Private repositories are only accessible to you, people you explicitly share access with, and, for organization repositories, certain organization members.
+      
 #### - How will you select the repository for the enterprise ? (think about technologies used and one unified way of creating repo for multiple application)
+
+
+- i will select Github enterprise because of cool features.
+
+      GitHub Enterprise Support
+      Additional security, compliance, and deployment controls
+      50,000 GitHub Actions minutes
+      50GB GitHub Packages storage
+
+- And can also use `lerna` technologies for managing repo of multiple application
+    
+    Lerna is a library that manages multi-repository structures inside a single repository by splitting subsets of the repository into own “sub” repositories. A repository organized in this way is called a mono-repo.
+
+    Lerna is primarily used in bigger projects that can become challenging to maintain over time. It modularizes the code into smaller manageable repositories and abstracts shareable code that can be used across these sub repos.
+    
 #### - Build a CI system? ( build Jenkins or bamboo or something similar), For our exercise bamboo or Jenkins anything can be used or both to learn different ways
+
+   - For that i use Jenkins for CI system and create jenkins file for actually implementtion of CI system in whole pipeline.
+   
 #### - For workshop purpose these systems need to run locally (think about running a Jenkins locally, make sure its data persists with restarts, you can run in docker or a VM)
 #### - To expose your local system accessible over internet you can use a tool like this - https://ngrok.com/ ( think about why would you expose this system over internet? does any outside system requires its presence over a URL that is accessible)
 #### - Build your artifacts (docker images, binaries or similar things that are repeatable and keep changing with application change)
