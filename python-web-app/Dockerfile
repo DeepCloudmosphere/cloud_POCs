@@ -1,5 +1,5 @@
 
-				### Dockerfile hjhj  ###
+				### Dockerfile   ###
 
 #### Stage 1 ###
 # Build virtualenv in apline image 
