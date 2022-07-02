@@ -5,6 +5,9 @@ To complete objectives for this case, you'll need to access and clone the ../app
 Artifacts can be documents, architecture diagrams or application binaries, docker images etc. Basically anything that is deliverable to different or same business line.
 
 
+
+
+
 ### Thought process:
  
 #### - What type of artifacts are required in order to run the application
