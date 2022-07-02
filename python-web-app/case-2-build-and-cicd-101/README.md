@@ -153,18 +153,44 @@ Artifacts can be documents, architecture diagrams or application binaries, docke
    
    ![Screenshot 2022-07-02 at 3 36 18 PM](https://user-images.githubusercontent.com/98619865/176996006-d095cb42-059f-4dd7-b3a1-c206b28d940e.png)
 
-   ![Screenshot 2022-07-02 at 3 40 28 PM](https://user-images.githubusercontent.com/98619865/176996153-a2715a3d-700b-443b-b4b8-aacdb5e781b2.png)
-
-   ![Screenshot 2022-07-02 at 3 38 27 PM](https://user-images.githubusercontent.com/98619865/176996096-7471f3d0-f44e-4892-825c-68859cc86454.png)
-
-   ![Screenshot 2022-07-02 at 3 39 15 PM](https://user-images.githubusercontent.com/98619865/176996115-9444e366-babd-4e52-94a3-4c8b2cb13a77.png)
-
-
+  
    
 #### - To expose your local system accessible over internet you can use a tool like this - https://ngrok.com/ ( think about why would you expose this system over internet? does any outside system requires its presence over a URL that is accessible)
+
+   I would like to expose my local virtual machine over internet because if any changes in souce code so i want Jenkins to monitor . it will also help our devloper to check if any build fail .. 
+   FOR THAT I WILL USE NGROK TOOL 
+   
+   ``` Ngrok is a reverse proxy that allows traffic to be redirected from the generated url to wherever your local server is running.```
+   
+   To expose VM firt install ngrok tool and configure to expose on port 8080 so that will generate url to  access jenkins..
+   
+   ![Screenshot 2022-07-02 at 5 22 25 PM](https://user-images.githubusercontent.com/98619865/176999599-ebd1bc41-7112-4c60-ad8b-9b0653ed65ce.png)
+
+   *Finally local system is exposed over internet and can be accessed by `https://d088-136-232-96-190.in.ngrok.io` url*
+   
+  
+  
+  
+  
+  
+    
 #### - Build your artifacts (docker images, binaries or similar things that are repeatable and keep changing with application change)
+
+
+
+
+
+  ![Screenshot 2022-07-02 at 3 40 28 PM](https://user-images.githubusercontent.com/98619865/176999726-b760cec1-ede6-475a-891e-e816b116ebfe.png)
+  ![Screenshot 2022-07-02 at 3 38 27 PM](https://user-images.githubusercontent.com/98619865/176999727-8c7c15f1-a61e-497c-b92f-6fc0faf4a8db.png)
+  ![Screenshot 2022-07-02 at 3 39 15 PM](https://user-images.githubusercontent.com/98619865/176999732-4affa475-7709-48bc-8f56-3b9d8baf280d.png)
+
+     
 #### - Try to change a version of your application and build a versioned artifacts in the repository? (Feeling confident?)
 
-3. Don't think about CD yet and read about need of a CI system and prepare notes around why do you need a CI system (maximum five bullet points)
+   Yes,  after building CI system i have tried to change version of application on github repository and CI system  will automatically build my artifact(Dockerfile) and also pushed on DockerHub..
+        
+   Yes i am feeling confident .
 
-4. Prepare a diagram of above system and keep it in the lucidchart (make sure you involve all teh components involved like Source code repo, CI system, Image or binary repo etc)
+# 3. Don't think about CD yet and read about need of a CI system and prepare notes around why do you need a CI system (maximum five bullet points)
+
+# 4. Prepare a diagram of above system and keep it in the lucidchart (make sure you involve all teh components involved like Source code repo, CI system, Image or binary repo etc)
