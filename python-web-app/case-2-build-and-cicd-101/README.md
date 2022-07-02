@@ -193,4 +193,12 @@ Artifacts can be documents, architecture diagrams or application binaries, docke
 
 # 3. Don't think about CD yet and read about need of a CI system and prepare notes around why do you need a CI system (maximum five bullet points)
 
-# 4. Prepare a diagram of above system and keep it in the lucidchart (make sure you involve all teh components involved like Source code repo, CI system, Image or binary repo etc)
+-  Continuous Integration is the practice of continuously integrating the changes made to the project and testing them accordingly at least on a daily basis or more frequently.
+-  Automating your build, test, and deploy processes can alleviate much of the headaches and problems commonly happening on projects.
+-  The key goals of continuous integration are to find and address bugs quicker, improve software quality, and reduce the time it takes to validate and release new software updates.
+-  At a high level, the value of continuous integration is to: Reduce risks. Reduce repetitive manual processes. Generate deployable software at any time and at any place.
+- The Continuous Integration process collaborates with the Continuous Delivery workflow that makes code sharing easy and regularized. This makes the process more transparent and collaborative among team members.
+
+# 4. Prepare a diagram of above system and keep it in the lucidchart (make sure you involve all tech components involved like Source code repo, CI system, Image or binary repo etc)
+
+   
