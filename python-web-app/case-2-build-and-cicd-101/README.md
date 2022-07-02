@@ -1,5 +1,4 @@
 Objective:     
-
 To complete objectives for this case, you'll need to access and clone the ../app-source-code folder and try to execute different commands
 
 # 1. Understanding artifacts in an SDLC: 
